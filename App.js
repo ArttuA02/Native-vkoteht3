@@ -5,7 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './Screens/HomeScreen';
 import SecondScreen from './Screens/SecondScreen';
-import CustomNavigationBar from './Screens/Options';
+import CustomNavigationBar from './components/Appbar';
 import { PaperProvider } from 'react-native-paper';
 
 export default function App() {
@@ -19,7 +19,6 @@ export default function App() {
           }}>
           <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home', headerTitle: 'Home', }} />
           <Stack.Screen name='Second' component={SecondScreen} option={{ title: 'Second', headerTitle: 'Second', }} />
-          <Stack.Screen name="Details" component={CustomNavigationBar} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>
